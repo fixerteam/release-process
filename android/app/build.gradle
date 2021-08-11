@@ -134,7 +134,7 @@ android {
         applicationId "com.releaseit"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 4
+        versionCode 3
         versionName "1.0.0"
     }
     splits {
