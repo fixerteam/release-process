@@ -1,0 +1,73 @@
+{
+    "branches": [
+      "master",
+      "next",
+      {
+        "name": "core",
+        "prerelease": true
+      }
+    ],
+    "plugins": [
+      [
+        "@semantic-release/commit-analyzer",
+        {
+          "preset": "conventionalcommits",
+          "releaseRules": [
+            {
+              "type": "refactor",
+              "release": "patch"
+            },
+            {
+              "type": "breaking",
+              "release": "major"
+            }
+          ]
+        }
+      ],
+      [
+        "@semantic-release/release-notes-generator",
+        {
+          "preset": "conventionalcommits",
+          "linkCompare": false,
+          "linkReferences": false,
+          "presetConfig": {
+            "types": [
+              {
+                "type": "feat",
+                "section": "Features"
+              },
+              {
+                "type": "fix",
+                "section": "Bug Fixes"
+              },
+              {
+                "type": "breaking",
+                "section": "Breaking Changes"
+              },
+              {
+                "type": "refactor",
+                "section": "Refactored"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        "@semantic-release/git",
+        {
+          "assets": [
+            "ios/releaseit/Info.plist",
+            "ios/releaseitTests/Info.plist",
+            "ios/releaseit.xcodeproj/project.pbxproj",
+            "ios/releaseit-tvOSTests/Info.plist",
+            "ios/releaseit-tvOS/Info.plist",
+            "android/app/build.gradle",
+            "package.json"
+          ]
+        }
+      ],
+      "@semantic-release/changelog",
+      "@semantic-release/npm",
+      "@semantic-release/github"
+    ]
+  }
