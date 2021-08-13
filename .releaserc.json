@@ -70,7 +70,8 @@
           "ios/releaseit-tvOS/Info.plist",
           "android/app/build.gradle",
           "package.json"
-        ]
+        ],
+        "message": "Release <%= nextRelease.version %> - <%= new Date().toLocaleDateString('en-US', {year: 'numeric', month: 'short', day: 'numeric', hour: 'numeric', minute: 'numeric' }) %>\n\n<%= nextRelease.notes %>"
       }
     ],
     "@semantic-release/github"
