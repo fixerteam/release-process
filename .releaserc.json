@@ -2,7 +2,11 @@
   "ci": false,
   "branches": [
     "master",
-    "next",
+    {
+      "name": "next",
+      "channel": "rc",
+      "prerelease": "rc"
+    },
     {
       "name": "core",
       "prerelease": true
