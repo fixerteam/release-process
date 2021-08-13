@@ -1,6 +1,6 @@
 {
   "name": "releaseit",
-  "version": "1.0.0-core.1",
+  "version": "1.0.0-core.2",
   "private": true,
   "scripts": {
     "android": "react-native run-android",
